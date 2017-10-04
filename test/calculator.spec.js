@@ -2,11 +2,7 @@ describe('Calculator', function () {
 
     beforeEach(function () {
 
-        var fixture = `<div id="fixture"></div>
-    <input id="text" type="text" placeholder="input a number">
-    <button id="calculate-btn"></button>
-    <p id="render"></p>
-    </div>`
+        var fixture = getFixture()
 
         document.body.insertAdjacentHTML(
             'afterbegin',
@@ -35,3 +31,11 @@ describe('Calculator', function () {
     })
 
 })
+
+function getFixture() {
+    return `<div id="fixture"></div>
+                <input id="text" type="text" placeholder="input a number">
+                <button id="calculate-btn"></button>
+                <p id="render"></p>
+                </div>`;
+}
